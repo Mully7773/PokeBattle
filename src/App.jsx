@@ -1,7 +1,13 @@
+import PokeCard from "./components/Card/PokeCard";
+
 const App = () => {
   return (
     <>
-      <section className="space-y-8 bg-green-400 ">
+      <section className=" place-items-center h-screen bg-slate-400 mx-auto grid grid-cols-2">
+        <PokeCard />
+        <PokeCard />
+      </section>
+      {/* <section className="space-y-8 bg-green-400 ">
         <div className="p-6 mx-auto bg-white rounded-xl shadow-lg flex flex-col items-center space-x-8  max-w-lg">
           <div className="shrink-0">
             <h1>Test</h1>
@@ -26,7 +32,7 @@ const App = () => {
             </button>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

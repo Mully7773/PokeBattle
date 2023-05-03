@@ -1,11 +1,13 @@
-import PokeCard from "./components/Card/PokeCard";
+import PokeCard from './components/Card/PokeCard';
+import { pokeData } from './pokeData';
 
 const App = () => {
   return (
     <>
-      <section className=" place-items-center h-screen bg-slate-400 mx-auto grid grid-cols-2">
-        <PokeCard />
-        <PokeCard />
+      <section className=' place-items-center h-screen bg-slate-400 mx-auto grid grid-cols-2'>
+        {pokeData.map(pokemon => {
+          return <PokeCard key={pokemon.id} pokemonInfo={pokemon} />;
+        })}
       </section>
       {/* <section className="space-y-8 bg-green-400 ">
         <div className="p-6 mx-auto bg-white rounded-xl shadow-lg flex flex-col items-center space-x-8  max-w-lg">

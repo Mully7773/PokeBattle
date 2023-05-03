@@ -1,33 +1,23 @@
-const PokeCard = () => {
+import PokeStats from './PokeStats';
+
+const PokeCard = ({ pokemonInfo }) => {
+  console.log(pokemonInfo.stats);
   return (
     <div className='rounded-2xl h-fit w-fit p-5 bg-gradient-to-br from-fuchsia-500 via-pink-400 to-yellow-200'>
-      <div rounded-sm flex flex-col>
+      <div className='rounded-sm flex flex-col'>
         <div className='bg-gradient-to-br from-yellow-400  to-yellow-100 p-2 rounded-sm'>
-          <div class='bg-fuchsia-900 flex justify-center items-center px-24 py-12'>
-            <img className='h-24 w-24' src='https://placehold.jp/150x150.png' />
+          <div className='bg-fuchsia-900 flex justify-center items-center px-24 py-12'>
+            <img className='h-24 w-24' src={pokemonInfo.pokemonSprite} />
           </div>
         </div>
         <div className='pt-4 flex flex-col gap-3'>
-          <h1 className='text-center capitalize font-bold text-xl '>espeon</h1>
+          <h1 className='text-center capitalize font-bold text-xl '>
+            {pokemonInfo.pokemonName}
+          </h1>
           <ul className='py-2 font-secondary grid grid-cols-2 grid-rows-3 gap-y-3 capitalize'>
-            <li className='uppercase'>
-              hp <span className='font-semibold'>24</span>
-            </li>
-            <li className='ml-auto'>
-              attack<span className='font-semibold'>25</span>
-            </li>
-            <li>
-              defense <span className='font-semibold'>41</span>
-            </li>
-            <li className='ml-auto'>
-              sp attack<span className='font-semibold'>102</span>
-            </li>
-            <li>
-              sp defense <span className='font-semibold'>75</span>
-            </li>
-            <li className='ml-auto'>
-              speed <span className='font-semibold'>100</span>
-            </li>
+            {pokemonInfo.stats.map((stat, index) => {
+              return <PokeStats key={index} stat={stat} index={index} />;
+            })}
           </ul>
           <div className='flex '>
             <div className='capitalize'>

@@ -52,31 +52,31 @@ export const pokeData = [
     pokemonType: 'dark',
     stats: [
       {
-        base_stat: 65,
+        base_stat: 72,
         stat: {
           name: 'hp',
         },
       },
       {
-        base_stat: 65,
+        base_stat: 82,
         stat: {
           name: 'attack',
         },
       },
       {
-        base_stat: 60,
+        base_stat: 59,
         stat: {
           name: 'defense',
         },
       },
       {
-        base_stat: 130,
+        base_stat: 119,
         stat: {
           name: 'sp-attack',
         },
       },
       {
-        base_stat: 95,
+        base_stat: 115,
         stat: {
           name: 'special-defense',
         },

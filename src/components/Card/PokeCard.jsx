@@ -5,11 +5,16 @@ const PokeCard = ({ pokemonInfo }) => {
   return (
     <div className='rounded-2xl h-fit w-fit p-5 bg-gradient-to-br from-fuchsia-500 via-pink-400 to-yellow-200'>
       <div className='rounded-sm flex flex-col'>
-        <div className='bg-gradient-to-br from-yellow-400  to-yellow-100 p-2 rounded-sm'>
+        <header className='relative bg-gradient-to-br from-yellow-400  to-yellow-100 p-2 rounded-sm'>
           <div className='bg-fuchsia-900 flex justify-center items-center px-24 py-12'>
             <img className='h-24 w-24' src={pokemonInfo.pokemonSprite} />
           </div>
-        </div>
+          <div className=' rounded-sm h-fit w-fit py-1 px-4 absolute bottom-0 left-4 translate-y-1/2 bg-gradient-to-tl from-pink-300 to-fuchsia-400'>
+            <span className='capitalize font-semibold font-secondary'>
+              {pokemonInfo.pokemonType}
+            </span>
+          </div>
+        </header>
         <div className='pt-4 flex flex-col gap-3'>
           <h1 className='text-center capitalize font-bold text-xl '>
             {pokemonInfo.pokemonName}
@@ -22,13 +27,13 @@ const PokeCard = ({ pokemonInfo }) => {
           <div className='flex '>
             <div className='capitalize'>
               <h2 className='uppercase text-xs font-secondary'>ability</h2>
-              <p className='font-semibold'>synchronize</p>
+              <p className='font-semibold'>{pokemonInfo.ability}</p>
             </div>
             <div className='ml-auto capitalize'>
               <h2 className='uppercase text-xs font-secondary'>
                 hidden ability
               </h2>
-              <p className='font-semibold'>magic bounce</p>
+              <p className='font-semibold'>{pokemonInfo.hiddenAbility}</p>
             </div>
           </div>
         </div>

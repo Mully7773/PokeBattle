@@ -27,12 +27,14 @@ const PokeStats = ({ stat, index }) => {
   return (
     <>
       <li
-        className={`${index % 2 === 0 ? '' : 'ml-auto'} ${
-          index === 0 ? 'uppercase' : 'capitalize'
-        } flex gap-2 `}
+        className={`${index === 2 ? 'ml-auto' : ''} ${
+          index === 3 ? 'ml-auto' : ''
+        } ${
+          index === 0 ? 'col-span-full place-self-center' : ''
+        } flex gap-2 capitalize `}
       >
         {stat.stat.name}
-        <span>{stat.base_stat}</span>
+        <span className='font-semibold'>{stat.base_stat}</span>
       </li>
     </>
   );

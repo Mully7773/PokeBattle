@@ -4,7 +4,12 @@ const PokeCard = ({ pokemonInfo }) => {
   console.log(pokemonInfo.stats);
   return (
     <div className='rounded-2xl h-fit w-fit p-4 bg-gradient-to-br from-amber-500 to-amber-300'>
-      <div className='pt-1 pb-2 bg-red-400 '>
+      <div className='pt-1 pb-2 bg-card-bg-fire bg-cover'>
+        {/* <div className='absolute z-10 bg-red-900 opacity-25 h-full w-auto'></div> */}
+        {/* <img
+          className='absolute hue-rotate-180 opacity-60'
+          src='/card-bg.webp'
+        /> */}
         <header className='mx-4 flex'>
           <h1 className='capitalize font-bold text-lg'>
             {pokemonInfo.pokemonName}

@@ -9,6 +9,13 @@ export default {
       boxShadow: {
         '3xl': '6px 5px 12px 0px rgba(90,53,29,1)',
       },
+      backgroundImage: {
+        'card-texture': "url('/card-bg.webp')",
+        'card-bg-water':
+          "linear-gradient(rgba(0, 0, 255, 0.5),  rgba(255, 255, 0, 0.5)), url('/card-bg.webp')",
+        'card-bg-fire':
+          "linear-gradient(rgba(255, 0, 0, 0.5),  rgba(255, 0, 0, 0.45)), url('/card-bg-alt.webp')",
+      },
     },
   },
   plugins: [],

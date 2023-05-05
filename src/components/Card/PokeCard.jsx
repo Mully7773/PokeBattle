@@ -3,13 +3,13 @@ import PokeStats from './PokeStats';
 const PokeCard = ({ pokemonInfo }) => {
   console.log(pokemonInfo.stats);
   return (
-    <div className='rounded-2xl h-fit w-fit p-4 bg-gradient-to-br from-yellow-500 to-yellow-400'>
-      <div className='h-96 w-64 bg-red-500 '>
+    <div className='rounded-2xl h-fit w-fit p-4 bg-gradient-to-br from-amber-500 to-amber-300'>
+      <div className='pt-1 pb-2 bg-red-400 '>
         <header className='mx-4 flex'>
-          <h1 className='capitalize font-bold text-l'>
+          <h1 className='capitalize font-bold text-lg'>
             {pokemonInfo.pokemonName}
           </h1>
-          <div className='ml-auto uppercase flex gap-x-1 font-semibold'>
+          <div className='ml-auto uppercase flex gap-x-1 font-bold font-secondary text-lg text-red-600'>
             <span>{pokemonInfo.stats[0].base_stat}</span>
             <span>{pokemonInfo.stats[0].stat.name}</span>
           </div>
@@ -20,15 +20,15 @@ const PokeCard = ({ pokemonInfo }) => {
           </div>
         </div>
 
-        <main className='px-2'>
-          <ul className='py-2  font-secondary grid grid-cols-2 grid-rows-3 gap-y-2 gap-x-2 capitalize'>
+        <main className='px-4 py-4 flex flex-col gap-y-5 divide-y-2 divide-neutral-700 '>
+          <ul className='py-2  font-secondary grid grid-cols-2 grid-rows-3 gap-y-4 gap-x-8 capitalize'>
             {pokemonInfo.stats
               .filter((stat, i) => i !== 0)
               .map((stat, index) => {
                 return <PokeStats key={index} stat={stat} index={index} />;
               })}
           </ul>
-          <footer className='flex '>
+          <footer className='flex pt-4'>
             <div className='capitalize'>
               <h2 className='uppercase text-xs font-secondary'>ability</h2>
               <p className='font-semibold'>{pokemonInfo.ability}</p>

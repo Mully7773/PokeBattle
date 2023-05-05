@@ -16,30 +16,35 @@ export const pokeData = [
         stat: {
           name: 'attack',
         },
+        statImage: '/src/assets/sword-thin-svgrepo-com.svg',
       },
       {
         base_stat: 60,
         stat: {
           name: 'defense',
         },
+        statImage: '/src/assets/defense.svg',
       },
       {
-        base_stat: 130,
+        base_stat: 42,
         stat: {
           name: 'sp-attack',
         },
+        statImage: '/src/assets/shuriken-svgrepo-com.svg',
       },
       {
         base_stat: 95,
         stat: {
           name: 'sp-defense',
         },
+        statImage: '/src/assets/special-defense.svg',
       },
       {
-        base_stat: 110,
+        base_stat: 12,
         stat: {
           name: 'speed',
         },
+        statImage: '/src/assets/speed.svg',
       },
     ],
     ability: 'synchronize',

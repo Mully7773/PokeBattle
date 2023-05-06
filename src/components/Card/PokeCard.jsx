@@ -3,14 +3,9 @@ import PokeStats from './PokeStats';
 const PokeCard = ({ pokemonInfo }) => {
   console.log(pokemonInfo.stats);
   return (
-    <div className='rounded-2xl h-fit w-fit p-4 bg-gradient-to-br from-amber-500 to-amber-300'>
-      <div className='pt-1 pb-2 bg-card-bg-fire bg-cover'>
-        {/* <div className='absolute z-10 bg-red-900 opacity-25 h-full w-auto'></div> */}
-        {/* <img
-          className='absolute hue-rotate-180 opacity-60'
-          src='/card-bg.webp'
-        /> */}
-        <header className='mx-4 flex'>
+    <div className='rounded-2xl h-fit w-fit p-4 bg-gradient-to-br from-amber-500 to-amber-300 shadow-xl'>
+      <div className='pt-2 pb-2 bg-card-bg-fire bg-cover'>
+        <header className='mx-5 flex'>
           <h1 className='capitalize font-bold text-lg'>
             {pokemonInfo.pokemonName}
           </h1>
@@ -19,13 +14,18 @@ const PokeCard = ({ pokemonInfo }) => {
             <span>{pokemonInfo.stats[0].stat.name}</span>
           </div>
         </header>
-        <div className=' mx-4 relative bg-gradient-to-br from-yellow-600 via-yellow-300 via-65% to-yellow-400 p-1 shadow-3xl'>
-          <div className='bg-orange-300 flex justify-center items-center px-24 py-12'>
+        <div className=' mx-5 relative bg-gradient-to-br from-yellow-600 via-yellow-300 via-65% to-yellow-400 p-1.5 shadow-3xl'>
+          <div className='bg-orange-300 flex justify-center items-center px-24 py-12 '>
             <img className='h-24 w-24' src={pokemonInfo.pokemonSprite} />
           </div>
         </div>
+        <div className='flex gap-2 italic font-semibold text-[0.65rem] text-xs justify-center bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-400 mx-auto w-fit px-4 py-[.1rem] mt-1 leading-none tracking-wide'>
+          <h2>Psychic Pokemon</h2>
+          <span>Height: 29</span>
+          <span>Weight: 206 lbs</span>
+        </div>
 
-        <main className='px-4 py-4 flex flex-col gap-y-5 divide-y-2 divide-neutral-700 '>
+        <main className='px-5 py-4 flex flex-col gap-y-5 divide-y-2 divide-neutral-700 '>
           <ul className='py-2  font-secondary grid grid-cols-2 grid-rows-3 gap-y-4 gap-x-8 capitalize'>
             {pokemonInfo.stats
               .filter((stat, i) => i !== 0)

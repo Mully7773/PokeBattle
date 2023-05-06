@@ -3,7 +3,9 @@ export const pokeData = [
     id: crypto.randomUUID(),
     pokemonSprite: 'https://placehold.jp/150x150.png',
     pokemonName: 'espeon',
-    pokemonType: 'fairy',
+    pokemonType: 'psychic',
+    pokemonWeight: '204',
+    pokemonHeight: '9',
     stats: [
       {
         base_stat: 65,

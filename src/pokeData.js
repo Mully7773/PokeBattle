@@ -1,9 +1,9 @@
 export const pokeData = [
   {
     id: crypto.randomUUID(),
-    pokemonSprite: 'https://placehold.jp/150x150.png',
-    pokemonName: 'espeon',
-    pokemonType: 'psychic',
+    pokemonSprite: '/src/assets/4.svg',
+    pokemonName: 'charmander',
+    pokemonType: 'fire',
     pokemonWeight: '204',
     pokemonHeight: '9',
     stats: [

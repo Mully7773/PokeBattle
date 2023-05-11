@@ -3,6 +3,12 @@ import { usePokemonData } from '../../hooks/usePokemonData';
 
 const PokeCard = ({ pokemonInfo }) => {
   const { data: pokemon } = usePokemonData();
+  const isDreamWorldImageAvailable =
+    pokemon?.sprites?.other?.dream_world?.front_default;
+  const imgSource = isDreamWorldImageAvailable
+    ? pokemon.sprites.other.dream_world.front_default
+    : pokemon?.sprites?.other?.['official-artwork']?.front_default;
+
   console.log(pokemon?.name);
   console.log(pokemon);
 
@@ -30,8 +36,12 @@ const PokeCard = ({ pokemonInfo }) => {
               <figure className='relative bg-gradient-to-br from-yellow-600 via-yellow-300 via-65% to-yellow-400 p-1.5 shadow-3xl '>
                 <div className='bg-orange-300 px-24 py-12'>
                   <img
-                    className='h-24 w-24 scale-150'
-                    src={pokemon?.sprites.other.dream_world.front_default}
+                    className={
+                      isDreamWorldImageAvailable
+                        ? 'h-24 w-24 scale-150'
+                        : 'h-24 w-24 scale-[1.7]'
+                    }
+                    src={imgSource}
                     alt={pokemon?.name}
                   />
                 </div>

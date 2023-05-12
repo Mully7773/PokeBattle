@@ -66,7 +66,7 @@ const PokeCard = ({ pokemonInfo }) => {
                 <div className='capitalize'>
                   <h2 className='uppercase text-xs font-secondary'>ability</h2>
                   <p className='font-semibold'>
-                    {/* {pokemon?.abilities[0].ability.name || 'None'} */}
+                    {pokemon?.abilities[0]?.ability?.name || 'None'}
                   </p>
                 </div>
                 <div className='ml-auto capitalize'>
@@ -74,7 +74,7 @@ const PokeCard = ({ pokemonInfo }) => {
                     hidden ability
                   </h2>
                   <p className='font-semibold'>
-                    {/* {pokemon?.abilities[1].ability.name || 'None'} */}
+                    {pokemon?.abilities[1]?.ability?.name || 'None'}
                   </p>
                 </div>
               </footer>

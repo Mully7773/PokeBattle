@@ -4,10 +4,16 @@ import { CONSTANTS } from '../constants/constants';
 
 const fetchPokemonData = async () => {
   const randomPokemon = randomNumberGenerator(CONSTANTS.POKECOUNT);
-  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/344`);
-  console.log(response);
+  const response = await fetch(
+    `https://pokeapi.co/api/v2/pokemon/${randomPokemon}`
+  );
   const data = await response.json();
-  return data;
+
+  const speciesResponse = await fetch(data.species.url);
+
+  const speciesData = await speciesResponse.json();
+  console.log(speciesData);
+  return { ...data, ...speciesData };
 };
 
 export const usePokemonData = () => {

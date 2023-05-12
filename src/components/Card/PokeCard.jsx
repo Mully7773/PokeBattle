@@ -3,15 +3,17 @@ import { usePokemonData } from '../../hooks/usePokemonData';
 
 const PokeCard = ({ pokemonInfo }) => {
   const { data: pokemon } = usePokemonData();
+
+  console.log('POKEMON', pokemon);
   const isDreamWorldImageAvailable =
     pokemon?.sprites?.other?.dream_world?.front_default;
   const imgSource = isDreamWorldImageAvailable
     ? pokemon.sprites.other.dream_world.front_default
     : pokemon?.sprites?.other?.['official-artwork']?.front_default;
 
-  console.log(pokemon?.name);
-  console.log(pokemon);
+  // console.log(pokemon);
 
+  // console.log(pokemonSpeciesData);
   // console.log(pokemonInfo.stats);
   return (
     <>
@@ -47,7 +49,7 @@ const PokeCard = ({ pokemonInfo }) => {
                 </div>
                 {/* inset-x-0 sets the left and right properties of the element to 0, making it fill the entire parent container horizontally.  */}
                 <figcaption className='absolute inset-x-0 flex items-center translate-y-2  gap-2 italic font-semibold text-[0.65rem] text-xs justify-center bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-400 mx-auto w-fit px-4 py-[.1rem] mt-[.2rem] leading-none tracking-wide'>
-                  <h2 className='capitalize'>#{pokemon?.order}</h2>
+                  <h2 className='capitalize'>#{pokemon?.id}</h2>
                   <span>Height: {pokemon?.height * 10} cm</span>
                   <span>Weight: {pokemon?.weight} lbs</span>
                 </figcaption>

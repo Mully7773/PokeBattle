@@ -24,7 +24,7 @@ const PokeStats = ({ stat, index }) => {
             className='absolute opacity-60 h-14 w-14'
             src='/src/assets/attack.svg'
           />
-          <span className='z-10'>{stat.stat.name}</span>
+          {/* <span className='z-10'>{stat.stat.name}</span> */}
           <span className='z-10 font-semibold'>{stat.base_stat}</span>
         </div>
       </li>

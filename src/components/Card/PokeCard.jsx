@@ -1,5 +1,6 @@
 import PokeStats from './PokeStats';
 import { usePokemonData } from '../../hooks/usePokemonData';
+import DrawCardBtn from '../UI/DrawCardBtn';
 
 const PokeCard = ({ pokemonInfo }) => {
   const { data: pokemon } = usePokemonData();

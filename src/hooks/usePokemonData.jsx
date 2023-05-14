@@ -17,5 +17,9 @@ const fetchPokemonData = async () => {
 };
 
 export const usePokemonData = () => {
-  return useQuery({ queryKey: ['pokemon'], queryFn: fetchPokemonData });
+  return useQuery({
+    queryKey: ['pokemon'],
+    queryFn: fetchPokemonData,
+    enabled: false,
+  });
 };

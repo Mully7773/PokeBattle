@@ -1,5 +1,5 @@
 import AppBackground from './components/Background/AppBackground';
-import PokeCard from './components/Card/PokeCard';
+import PokeCard from './components/PokeCard/PokeCard';
 import DrawCardBtn from './components/UI/DrawCardBtn';
 import { pokeData } from './pokeData';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

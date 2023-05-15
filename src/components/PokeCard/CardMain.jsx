@@ -10,6 +10,7 @@ const CardMain = ({ pokemon }) => {
             return <PokeStats key={index} stat={stat} index={index} />;
           })}
       </ul>
+      <div></div>
     </main>
   );
 };

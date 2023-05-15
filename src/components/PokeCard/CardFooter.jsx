@@ -1,6 +1,6 @@
 const CardFooter = ({ pokemon }) => {
   return (
-    <footer className='flex pt-4'>
+    <footer className='flex pt-4 px-5 '>
       <div className='capitalize'>
         <h2 className='uppercase text-xs font-secondary'>ability</h2>
         <p className='font-semibold'>

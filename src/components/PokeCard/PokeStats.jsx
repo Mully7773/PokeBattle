@@ -35,16 +35,13 @@ const PokeStats = ({ stat, index }) => {
       <li
         className={`${index === 2 ? 'ml-auto' : ''} ${
           index === 3 ? 'ml-auto' : ''
-        } ${
-          index === 0 ? 'col-span-full place-self-center' : ''
-        } flex gap-2 capitalize text-lg`}
+        } ${index === 0 ? 'col-span-full place-self-center' : ''} `}
       >
-        {/* {stat.statImage && <img className='h-6' src={stat.statImage} />} */}
         <div
-          className={`flex items-center   leading-none gap-2 relative h-[4rem] w-fit ${
+          className={`flex items-center leading-none gap-2 relative h-[4rem] w-fit ${
             index === 2 || index === 4 ? 'flex-row-reverse' : ''
           }
-          ${index === 0 ? 'flex-col gap-0' : ''} `}
+          ${index === 0 ? 'flex-col gap-[.1rem]' : ''} `}
         >
           <img
             className={` h-10 w-10 opacity-50 

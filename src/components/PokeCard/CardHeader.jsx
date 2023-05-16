@@ -12,7 +12,7 @@ const CardHeader = ({ pokemon }) => {
             return (
               <img
                 key={type}
-                className='w-4 mb-1'
+                className='w-5 mb-1'
                 src={`/src/assets/pokemonTypes/${type}.svg`}
                 alt='Pokemon type icon'
               />

@@ -24,8 +24,8 @@ const CardIllustration = ({ pokemon }) => {
         </div>
         {/* inset-x-0 sets the left and right properties of the element to 0, making it fill the entire parent container horizontally.  */}
         <figcaption
-          className={`absolute inset-x-0 flex items-center translate-y-2  gap-2 italic font-semibold text-[0.649rem] text-xs justify-center bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-400 mx-auto w-fit px-4 py-[.1rem] mt-[.2rem] leading-none tracking-wide ${
-            genus.length > 17 ? 'text-[0.64rem]' : 'text-[0.649rem'
+          className={`absolute inset-x-0 flex items-center translate-y-2  gap-2 italic font-semibold justify-center bg-gradient-to-r from-amber-500 via-yellow-200 to-amber-400 mx-auto w-fit px-4 py-[.1rem] mt-[.2rem] leading-none tracking-wide ${
+            genus.length > 16 ? 'text-[0.64rem]' : 'text-[0.649rem]'
           }`}
         >
           <h2 className='capitalize'>{genus}</h2>

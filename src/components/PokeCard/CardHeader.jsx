@@ -7,7 +7,7 @@ const CardHeader = ({ pokemon }) => {
       <div className='ml-auto uppercase flex gap-x-1 font-bold font-secondary text-lg text-red-600 items-center justify-center'>
         <span>{pokemon?.stats[0].base_stat}</span>
         <span>{pokemon?.stats[0].stat.name}</span>
-        <div className='flex'>
+        <div className='flex gap-1'>
           {pokemonTypes.map(type => {
             return (
               <img

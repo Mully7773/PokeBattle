@@ -2,6 +2,9 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
+      colors: {
+        legendaryGold: '#FFD700',
+      },
       fontFamily: {
         primary: ['Ubuntu', 'ui-sans-serif', 'system-ui'],
         secondary: ['Roboto Condensed', 'ui-sans-serif', 'system-ui'],

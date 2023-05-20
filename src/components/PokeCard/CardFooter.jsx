@@ -45,7 +45,20 @@ const CardFooter = ({ pokemon }) => {
         >
           {adjustedFlavorText ||
             'No supplementary information on this Pokemon is available yet.'}{' '}
-          <span className='text-[0.64rem] font-bold'>#{pokemon?.id}</span>
+          <span className='text-[0.64rem] font-bold'>#{pokemon?.id} </span>
+          {pokemon?.is_legendary && (
+            <span className='capitalize font-bold  text-legendaryGold tracking-wider'>
+              legendary
+            </span>
+          )}
+          {pokemon?.is_mythical && (
+            <span
+              className='capitalize font-bold  bg-gradient-to-r text-transparent bg-clip-text from-red-400 via-yellow-400 to-blue-400  drop-shadow-xl
+            font-secondary [text-shadow:_1px_1px_1px_rgb(0_0_0_/_35%)] tracking-wider'
+            >
+              mythical
+            </span>
+          )}
         </p>
       </div>
     </footer>

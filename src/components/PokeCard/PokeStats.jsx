@@ -1,14 +1,5 @@
 const PokeStats = ({ stat, index }) => {
   console.log(stat.stat.name);
-  // const attackAbbreviation = 'Sp. Atk';
-  // const defenseAbbreviation = 'Sp. Def';
-
-  // if (stat.stat.name === 'special-attack') {
-  //   stat.stat.name = attackAbbreviation;
-  // }
-  // if (stat.stat.name === 'special-defense') {
-  //   stat.stat.name = defenseAbbreviation;
-  // }
 
   let imgSrc;
   switch (stat.stat.name) {
@@ -38,10 +29,10 @@ const PokeStats = ({ stat, index }) => {
         } ${index === 0 ? 'col-span-full place-self-center' : ''} `}
       >
         <div
-          className={`flex items-center leading-none gap-2 relative h-[4rem] w-fit ${
+          className={`flex items-center leading-none gap-2 relative h-auto w-fit ${
             index === 2 || index === 4 ? 'flex-row-reverse' : ''
           }
-          ${index === 0 ? 'flex-col gap-[.1rem]' : ''} `}
+          ${index === 0 ? 'flex-col gap-[.1rem]' : 'py-[.4rem]'} `}
         >
           <img
             className={` h-10 w-10 opacity-50 

@@ -4,9 +4,7 @@ import { CONSTANTS } from '../constants/constants';
 
 const fetchPokemonData = async () => {
   const randomPokemon = randomNumberGenerator(CONSTANTS.POKECOUNT);
-  const response = await fetch(
-    `https://pokeapi.co/api/v2/pokemon/${randomPokemon}`
-  );
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/212`);
   const data = await response.json();
 
   const speciesResponse = await fetch(data.species.url);

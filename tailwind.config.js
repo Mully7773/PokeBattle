@@ -17,7 +17,7 @@ export default {
         'card-bg-water':
           "linear-gradient(rgba(0, 0, 255, 0.5),  rgba(255, 255, 0, 0.5)), url('/card-bg.webp')",
         'card-bg-fire':
-          "linear-gradient(rgba(255, 0, 0, 0.5),  rgba(255, 0, 0, 0.45)), url('/card-bg-alt.webp')",
+          "linear-gradient(rgba(255, 0, 0, 0.5),  rgba(255, 0, 0, 0.5)), url('/card-bg-alt.webp')",
       },
     },
   },

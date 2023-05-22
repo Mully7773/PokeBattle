@@ -15,7 +15,7 @@ const PokeCard = () => {
     <>
       {pokemon && (
         <CardBorder>
-          <CardBackground>
+          <CardBackground pokemon={pokemon}>
             <CardHeader pokemon={pokemon} />
             <CardIllustration pokemon={pokemon} />
             <CardMain pokemon={pokemon} />

@@ -35,7 +35,7 @@ const CardFooter = ({ pokemon }) => {
           {pokemon?.abilities[1]?.ability?.name || 'None'}
         </p>
       </div>
-      <div className='col-span-full place-self-center w-72  outline-offset-2 outline-2 outline-amber-500 outline '>
+      <div className='col-span-full place-self-center w-72  outline-offset-2 outline-2 outline-amber-400 outline '>
         <p
           className={`font-medium italic py-[.1rem] px-2 leading-[.7rem] ${
             pokemon?.flavor_text_entries[0]?.flavor_text.length > 120

@@ -10,11 +10,9 @@ const CardBackground = ({ children, pokemon }) => {
   // return <div className='pt-2 pb-2 bg-card-bg-fire bg-cover'>{children}</div>;
   return (
     <div
-      className='pt-2 pb-2'
+      className='pt-2 pb-2 bg-cover bg-center'
       style={{
         background: `linear-gradient(${gradientColorTop},  ${gradientColorBottom}), url('/card-bg.webp')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
       }}
     >
       {children}

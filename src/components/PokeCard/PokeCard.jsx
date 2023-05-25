@@ -7,7 +7,7 @@ import CardBorder from './CardBorder';
 import CardBackground from './CardBackground';
 
 const PokeCard = () => {
-  const { data: pokemon, isError, error } = usePokemonData();
+  const { data: pokemon, isError, error, isLoading } = usePokemonData();
 
   console.log('POKEMON', pokemon);
 
@@ -15,6 +15,9 @@ const PokeCard = () => {
     return <h1>An error occurred: {error.message}</h1>;
   }
 
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
   return (
     <>
       {pokemon && (
